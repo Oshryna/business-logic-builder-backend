@@ -1,0 +1,27 @@
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:03:08"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:03:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:10:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:10:40"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:10:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:11:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:16:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:16:38"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:17:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:17:17"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:18:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:19:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:20:29"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:21:49"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:21:58"}
+{"_changed":{},"_options":{"_schema":null,"_schemaDelimiter":"","isNewRecord":true},"_previousDataValues":{"CreationTime":"2025-03-24T21:22:12.153Z","Id":"9467E471-DACB-4734-B800-699A9A77D73D","Logic":"{\"type\":\"AND\",\"conditions\":[{\"field\":\"$.person.name\",\"operator\":\"eq\",\"comparison_prop\":{\"type\":\"simple\",\"name\":\"\"},\"value_prop\":{\"type\":\"const\",\"value\":\"aaaa\",\"offset\":null}}],\"name\":\"test-1\"}","RejectId":"F7429EDA-C363-4677-8722-0ACE82A6FCC3"},"dataValues":{"CreationTime":"2025-03-24T21:22:12.153Z","Id":"9467E471-DACB-4734-B800-699A9A77D73D","Logic":"{\"type\":\"AND\",\"conditions\":[{\"field\":\"$.person.name\",\"operator\":\"eq\",\"comparison_prop\":{\"type\":\"simple\",\"name\":\"\"},\"value_prop\":{\"type\":\"const\",\"value\":\"aaaa\",\"offset\":null}}],\"name\":\"test-1\"}","RejectId":"F7429EDA-C363-4677-8722-0ACE82A6FCC3"},"isNewRecord":false,"level":"info","message":"Business logic created:","null":null,"timestamp":"2025-03-24 23:22:12","uniqno":1}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:27:47"}
+{"0":"E","1":"1","10":"A","11":"6","12":"0","13":"-","14":"4","15":"0","16":"D","17":"C","18":"-","19":"A","2":"5","20":"E","21":"4","22":"F","23":"-","24":"E","25":"7","26":"A","27":"E","28":"7","29":"9","3":"2","30":"1","31":"3","32":"E","33":"2","34":"3","35":"8","4":"B","5":"6","6":"5","7":"D","8":"-","9":"0","level":"info","message":"Business logic created:","timestamp":"2025-03-24 23:28:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:29:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:30:21"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:30:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:31:29"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:32:15"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:32:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:32:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-24 23:33:02"}
+{"level":"info","message":"Business logic created!","timestamp":"2025-03-24 23:38:54"}
