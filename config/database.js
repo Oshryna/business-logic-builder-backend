@@ -1,10 +1,10 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-const dbHost = process.env.DB_HOST_NAME;
-const database = process.env.DB_DATABASE;
-const dbUserName = process.env.DB_USER_NAME;
-const dbPass = process.env.DB_PASS;
+const dbHost = process.env.DB_SERVER;
+const database = process.env.DB_NAME;
+const dbUserName = process.env.DB_USER;
+const dbPass = process.env.DB_PASSWORD;
 const dbTrustServerCertificate = Boolean(process.env.DB_TrustServerCertificate);
 
 const sequelize = new Sequelize(database, dbUserName, dbPass, {

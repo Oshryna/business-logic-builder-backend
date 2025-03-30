@@ -1,6 +1,7 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const logger = require("./helper/logger");
+const path = require("path");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const rulesRouter = require("./routes/rules");
@@ -8,20 +9,51 @@ const evaluateRouter = require("./routes/evaluate");
 const sampleRouter = require("./routes/sample");
 const saveLogicRouter = require("./routes/saveLogic");
 const ruleListRouter = require("./routes/ruleList");
+const logger = require("./helper/logger");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
+// Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/rules", rulesRouter);
-app.use("/api/ruleList", ruleListRouter);
-app.use("/api/evaluate", evaluateRouter);
-app.use("/api/sample", sampleRouter);
-app.use("/api/saveLogic", saveLogicRouter);
+// Logging middleware
+app.use(logger.middleware());
 
+// // Import routes
+// const routes = require("./routes");
+
+// // API routes
+// app.use("/api", routes);
+
+// Frontend logs endpoint
+app.post("/api/logs/frontend", (req, res) => {
+  const { level, message, contextData, correlationId } = req.body;
+
+  // Validate log level
+  const validLevels = ["trace", "debug", "info", "warn", "error", "fatal"];
+  const logLevel = validLevels.includes(level) ? level : "info";
+
+  // Use the logger with the appropriate level
+  logger[logLevel](
+    `[FRONTEND] ${message}`,
+    contextData,
+    correlationId || req.headers["x-correlation-id"]
+  );
+
+  res.status(200).json({ success: true });
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  req.logger.error("Server error", err);
+  res.status(500).json({ message: "Internal server error" });
+});
+
+// Start server
 app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
+  logger.info(`Server started on port ${PORT}`);
 });
 
 module.exports = app;
