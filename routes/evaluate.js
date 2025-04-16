@@ -1,5 +1,5 @@
 const express = require("express");
-const logger = require("../helper/logger");
+// const logger = require("../helper/logger");
 const router = express.Router();
 const { evaluateCondition } = require("../helper/evaluateCondition");
 // Route to evaluate data against business logic
@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
     const result = evaluateCondition(businessLogic, data);
     res.json({ success: true, result });
   } catch (error) {
-    logger.error("Error evaluating business logic:", error);
+    req.logger.error("Error evaluating business logic:", error);
     res.status(500).json({ success: false, error: error.message });
   }
 });

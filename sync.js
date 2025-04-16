@@ -1,5 +1,4 @@
 const { sequelize } = require("./config/database");
-const BusinessLogic = require("./models/BusinessLogic");
 
 (async () => {
   try {

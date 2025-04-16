@@ -9,9 +9,14 @@ const evaluateRouter = require("./routes/evaluate");
 const sampleRouter = require("./routes/sample");
 const saveLogicRouter = require("./routes/saveLogic");
 const ruleListRouter = require("./routes/ruleList");
-const logger = require("./helper/logger");
+const Logger = require("common-logging-service");
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Configure Logger
+const logger = new Logger({
+  serviceName: "backend-api"
+});
 
 // Middleware
 app.use(cors());
@@ -20,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Logging middleware
 app.use(logger.middleware());
-
+app.use("/api/saveLogic", saveLogicRouter);
 // // Import routes
 // const routes = require("./routes");
 
